@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { changeChannelName } from '../ngrx/counter.actions';
-import { channelNameSelector } from '../ngrx/counter.selectors';
-import { CounterState } from '../ngrx/counter.state';
+import { changeChannelName } from '../state/counter.actions';
+import { channelNameSelector } from '../state/counter.selectors';
+import { CounterState } from '../state/counter.state';
 
 @Component({
   selector: 'app-counter-channel',

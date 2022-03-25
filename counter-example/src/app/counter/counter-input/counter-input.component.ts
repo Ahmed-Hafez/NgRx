@@ -1,5 +1,5 @@
-import { increment, decrement, customIncrement, customDecrement } from './../ngrx/counter.actions';
-import { CounterState } from './../ngrx/counter.state';
+import { increment, decrement, customIncrement, customDecrement } from '../state/counter.actions';
+import { CounterState } from '../state/counter.state';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 

@@ -4,15 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter.component';
-import { CounterButtonsComponent } from './counter-buttons/counter-buttons.component';
-import { CounterOutputComponent } from './counter-output/counter-output.component';
+import { CounterButtonsComponent } from './counter/counter-buttons/counter-buttons.component';
+import { CounterOutputComponent } from './counter/counter-output/counter-output.component';
 import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './ngrx/counter.reducer';
-import { CounterInputComponent } from './counter-input/counter-input.component';
+import { counterReducer } from './counter/state/counter.reducer';
+import { CounterInputComponent } from './counter/counter-input/counter-input.component';
 import { FormsModule } from '@angular/forms';
-import { CounterChannelComponent } from './counter-channel/counter-channel.component';
+import { CounterChannelComponent } from './counter/counter-channel/counter-channel.component';
 import { HomeComponent } from './home/home.component';
 import { PostsComponent } from './posts/posts.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { PostsComponent } from './posts/posts.component';
     BrowserModule,
     FormsModule,
     StoreModule.forRoot({counter: counterReducer}),
-    AppRoutingModule
+    AppRoutingModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

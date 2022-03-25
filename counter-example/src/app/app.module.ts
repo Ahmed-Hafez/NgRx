@@ -11,6 +11,8 @@ import { counterReducer } from './ngrx/counter.reducer';
 import { CounterInputComponent } from './counter-input/counter-input.component';
 import { FormsModule } from '@angular/forms';
 import { CounterChannelComponent } from './counter-channel/counter-channel.component';
+import { HomeComponent } from './home/home.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { CounterChannelComponent } from './counter-channel/counter-channel.compo
     CounterButtonsComponent,
     CounterOutputComponent,
     CounterInputComponent,
-    CounterChannelComponent
+    CounterChannelComponent,
+    HomeComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
